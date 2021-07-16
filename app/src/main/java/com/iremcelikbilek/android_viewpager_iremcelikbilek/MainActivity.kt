@@ -85,8 +85,9 @@ class MainActivity : AppCompatActivity() {
                 //We are calling this function because we need to record that the onBoarding screen is called for the first time.
                 //Otherwise we will see the onboarding screen every time the app is opened.
                 savePrefData()
-                val i = Intent(applicationContext, HomeActivity::class.java)
-                startActivity(i)
+                val intent = Intent(applicationContext, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
 
